@@ -29,4 +29,17 @@ class PostsController < ApplicationController
       redirect_to :back
     end
   end
+
+  def edit
+    @post = Post.find params[:id]
+  end
+
+  def update
+    @post = Post.find params[:id]
+    if @post.update params[:post]
+      redirect_to '/posts'
+    else
+      render 'edit'
+    end
+  end
 end
