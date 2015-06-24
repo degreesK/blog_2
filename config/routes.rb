@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :posts
+  resources :categories
+  
   # THE ABOVE TAKES PLACE OF THE BELOW 7 LINES
   # get 'posts/new'         => 'posts#new'
   # post 'posts'            => 'posts#create'
