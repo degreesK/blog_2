@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :posts
   resources :categories
+  root 'welcome#index'
   
   # THE ABOVE TAKES PLACE OF THE BELOW 7 LINES
   # get 'posts/new'         => 'posts#new'

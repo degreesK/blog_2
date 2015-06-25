@@ -1,2 +1,8 @@
 <%= @category.name %><br>
+<ul>
+  <% @category.posts.each do |post| %>
+    <li><%= link_to post.title, post %></li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', "/categories/#{@category.id}/edit" %>&mdash;<%= link_to 'Back', '/categories' %>
